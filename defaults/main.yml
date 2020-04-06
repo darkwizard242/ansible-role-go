@@ -1,0 +1,12 @@
+---
+# defaults file for go
+
+go_app: go
+go_version: 1.14.1
+go_osarch: linux-amd64
+go_dl_url: "https://dl.google.com/{{ go_app }}/{{ go_app }}{{ go_version }}.{{ go_osarch }}.tar.gz"
+go_bin_path: /usr/local
+go_profile_template_export_line: "{{ go_bin_path}}/go/bin"
+go_profile_template_path: /etc/profile.d
+go_profile_template_source_file: go.j2
+go_profile_template_dest_file: go.sh
