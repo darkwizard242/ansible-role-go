@@ -1,0 +1,30 @@
+---
+galaxy_info:
+  role_name: go
+  author: Ali Muhammad
+  description: Installs/Uninstalls 'go' - programming language and sets up system-wide export.
+  company: none
+  license: MIT
+  min_ansible_version: 2.4
+
+  platforms:
+    - name: Ubuntu
+      versions:
+        - xenial
+        - bionic
+    - name: Debian
+      versions:
+        - jessie
+        - stretch
+        - buster
+    - name: EL
+      versions:
+        - 7
+        - 8
+
+  galaxy_tags:
+    - go
+    - system
+    - os
+    - programming
+    - google
