@@ -1,13 +1,13 @@
 ---
-# tasks file for go
+# tasks file for go | Debian/Ubuntu Family
 
-- name: "Downloading and extracting {{ go_app }} {{ go_version }} on Debian based systems."
+- name: Debian/Ubuntu Family | Downloading and extracting {{ go_app }} {{ go_version }}
   unarchive:
     src: "{{ go_dl_url }}"
     dest: "{{ go_bin_path }}"
     remote_src: yes
 
-- name: "Placing {{ go_profile_template_dest_file }} in {{ go_profile_template_path }} for system-wide availability on Debian based systems"
+- name: Debian/Ubuntu Family | Placing {{ go_profile_template_dest_file }} in {{ go_profile_template_path }} for system-wide availability
   template:
     src: "{{ go_profile_template_source_file }}"
     dest: "{{ go_profile_template_path }}/{{ go_profile_template_dest_file }}"
