@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/darkwizard242/ansible-role-go.svg?branch=master)](https://travis-ci.com/darkwizard242/ansible-role-go) ![Ansible Role](https://img.shields.io/ansible/role/47668?color=dark%20green%20) ![Ansible Role](https://img.shields.io/ansible/role/d/47668?label=role%20downloads) ![Ansible Quality Score](https://img.shields.io/ansible/quality/47668?label=ansible%20quality%20score) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ansible-role-go&metric=alert_status)](https://sonarcloud.io/dashboard?id=ansible-role-go) ![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/darkwizard242/ansible-role-go?label=release) ![GitHub repo size](https://img.shields.io/github/repo-size/darkwizard242/ansible-role-go?color=orange&style=flat-square)
+[[![build-test](https://github.com/darkwizard242/ansible-role-go/workflows/build-and-test/badge.svg?branch=master)](https://github.com/darkwizard242/ansible-role-go/actions?query=workflow%3Abuild-and-test) [![release](https://github.com/darkwizard242/ansible-role-go/workflows/release/badge.svg)](https://github.com/darkwizard242/ansible-role-go/actions?query=workflow%3Arelease) ![Ansible Role](https://img.shields.io/ansible/role/47668?color=dark%20green%20) ![Ansible Role](https://img.shields.io/ansible/role/d/47668?label=role%20downloads) ![Ansible Quality Score](https://img.shields.io/ansible/quality/47668?label=ansible%20quality%20score) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ansible-role-go&metric=alert_status)](https://sonarcloud.io/dashboard?id=ansible-role-go) [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=ansible-role-go&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=ansible-role-go) [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=ansible-role-go&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=ansible-role-go) [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=ansible-role-go&metric=security_rating)](https://sonarcloud.io/dashboard?id=ansible-role-go) ![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/darkwizard242/ansible-role-go?label=release) ![GitHub repo size](https://img.shields.io/github/repo-size/darkwizard242/ansible-role-go?color=orange&style=flat-square)
 
 # Ansible Role: go
 
@@ -16,7 +16,7 @@ Available variables are listed below (located in `defaults/main.yml`):
 
 ```yaml
 go_app: go
-go_version: 1.15.2
+go_version: 1.15.5
 go_osarch: linux-amd64
 go_dl_url: "https://dl.google.com/{{ go_app }}/{{ go_app }}{{ go_version }}.{{ go_osarch }}.tar.gz"
 go_bin_path: /usr/local
@@ -31,7 +31,7 @@ go_profile_template_dest_file: go.sh
 Variable                        | Value (default)                                                                            | Description
 ------------------------------- | ------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------
 go_app                          | go                                                                                         | Defines the app to install i.e. **go**
-go_version                      | 1.15.2                                                                                     | Defined to dynamically fetch the desired version to install. Defaults to: **1.15.2**
+go_version                      | 1.15.5                                                                                     | Defined to dynamically fetch the desired version to install. Defaults to: **1.15.5**
 go_osarch                       | linux-amd64                                                                                | Defines os architecture. Used for obtaining the correct type of binaries based on OS System Architecture. Defaults to: **linux-amd64**
 go_dl_url                       | "<https://dl.google.com/{{> go_app }}/{{ go_app }}{{ go_version }}.{{ go_osarch }}.tar.gz" | Defines URL to download the go binary from.
 go_bin_path                     | /usr/local                                                                                 | Defined to dynamically set the appropriate path to store go binary into. Defaults to: **/usr/local** - which is sourced using a handler.

@@ -11,5 +11,6 @@
   template:
     src: "{{ go_profile_template_source_file }}"
     dest: "{{ go_profile_template_path }}/{{ go_profile_template_dest_file }}"
+    mode: '0755'
   notify:
     - "Source {{ go_profile_template_path }}/{{ go_profile_template_dest_file }} to take effect system-wide and be available with new login shell"
