@@ -2,4 +2,6 @@
 # handlers file for go
 
 - name: "Source {{ go_profile_template_path }}/{{ go_profile_template_dest_file }} to take effect system-wide and be available with new login shell"
-  command: "source {{ go_profile_template_path }}/{{ go_profile_template_dest_file }}"
+  shell: ". {{ go_profile_template_path }}/{{ go_profile_template_dest_file }}"
+  args:
+    executable: /bin/bash
