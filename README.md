@@ -16,7 +16,7 @@ Available variables are listed below (located in `defaults/main.yml`):
 
 ```yaml
 go_app: go
-go_version: 1.15.5
+go_version: 1.16.2
 go_osarch: linux-amd64
 go_dl_url: "https://dl.google.com/{{ go_app }}/{{ go_app }}{{ go_version }}.{{ go_osarch }}.tar.gz"
 go_bin_path: /usr/local
@@ -31,7 +31,7 @@ go_profile_template_dest_file: go.sh
 Variable                        | Value (default)                                                                            | Description
 ------------------------------- | ------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------
 go_app                          | go                                                                                         | Defines the app to install i.e. **go**
-go_version                      | 1.15.5                                                                                     | Defined to dynamically fetch the desired version to install. Defaults to: **1.15.5**
+go_version                      | 1.16.2                                                                                     | Defined to dynamically fetch the desired version to install. Defaults to: **1.16.2**
 go_osarch                       | linux-amd64                                                                                | Defines os architecture. Used for obtaining the correct type of binaries based on OS System Architecture. Defaults to: **linux-amd64**
 go_dl_url                       | "<https://dl.google.com/{{> go_app }}/{{ go_app }}{{ go_version }}.{{ go_osarch }}.tar.gz" | Defines URL to download the go binary from.
 go_bin_path                     | /usr/local                                                                                 | Defined to dynamically set the appropriate path to store go binary into. Defaults to: **/usr/local** - which is sourced using a handler.
