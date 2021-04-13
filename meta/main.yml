@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   role_name: go
-  author: Ali Muhammad
+  author: darkwizard242
   description: Installs/Uninstalls 'go' - programming language and sets up system-wide export.
   company: none
   license: MIT
