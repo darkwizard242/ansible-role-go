@@ -16,7 +16,7 @@ Available variables are listed below (located in `defaults/main.yml`):
 
 ```yaml
 go_app: go
-go_version: 1.16.2
+go_version: 1.16.4
 go_osarch: linux-amd64
 go_dl_url: "https://dl.google.com/{{ go_app }}/{{ go_app }}{{ go_version }}.{{ go_osarch }}.tar.gz"
 go_bin_path: /usr/local
