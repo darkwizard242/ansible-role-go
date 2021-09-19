@@ -1,0 +1,18 @@
+---
+# tasks file for go | EL Family
+
+- name: EL Family | Removing {{ go_app }} {{ go_version }} directory
+  file:
+    path: "{{ go_bin_path }}"
+    state: absent
+  when:
+    - not go_setup
+
+- name: EL Family | Removing {{ go_profile_template_dest_file }} from {{ go_profile_template_path }}
+  file:
+    path: "{{ go_profile_template_path }}/{{ go_profile_template_dest_file }}"
+    state: absent
+  notify:
+    - "Source {{ go_profile_template_path }}/{{ go_profile_template_dest_file }} to take effect system-wide and be available with new login shell"
+  when:
+    - not go_setup

@@ -6,6 +6,8 @@
     src: "{{ go_dl_url }}"
     dest: "{{ go_bin_path }}"
     remote_src: yes
+  when:
+    - go_setup
 
 - name: Debian/Ubuntu Family | Placing {{ go_profile_template_dest_file }} in {{ go_profile_template_path }} for system-wide availability
   template:
@@ -14,3 +16,5 @@
     mode: '0755'
   notify:
     - "Source {{ go_profile_template_path }}/{{ go_profile_template_dest_file }} to take effect system-wide and be available with new login shell"
+  when:
+    - go_setup
