@@ -7,6 +7,8 @@ on:
   push:
     branches:
       - 'feature_*'
+      - 'feature/*'
+      - 'feature_*'
       - 'master'
   schedule:
     - cron: '0 16 * * *'
