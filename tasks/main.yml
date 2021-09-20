@@ -20,7 +20,7 @@
     - go_setup
 
 - name: Import install_el.yml if OS family is EL and go_setup is false
-  import_tasks: install_el.yml
+  import_tasks: uninstall_el.yml
   when:
     - ansible_os_family == "RedHat"
     - not go_setup
