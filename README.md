@@ -17,7 +17,7 @@ Available variables are listed below (located in `defaults/main.yml`):
 ```yaml
 go_app: go
 go_setup: true
-go_version: 1.17.1
+go_version: 1.17.6
 go_osarch: linux-amd64
 go_dl_url: "https://dl.google.com/{{ go_app }}/{{ go_app }}{{ go_version }}.{{ go_osarch }}.tar.gz"
 go_bin_path: /usr/local
@@ -33,7 +33,7 @@ Variable                        | Description
 ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 go_app                          | Defines the app to install i.e. **go**
 go_setup                        | Boolean variable that only allows `true` or `false` values. Defaults to `true`. When set to `true` it will setup/install go. When set to `false`, it will remove go from the system - assuming it was installed via this role and value for `go_bin_path` path is correct.
-go_version                      | Defined to dynamically fetch the desired version to install. Defaults to: **1.17.1**
+go_version                      | Defined to dynamically fetch the desired version to install. Defaults to: **1.17.6**
 go_osarch                       | Defines os architecture. Used for obtaining the correct type of binaries based on OS System Architecture. Defaults to: **linux-amd64**
 go_dl_url                       | Defines URL to download the go binary from.
 go_bin_path                     | Defined to dynamically set the appropriate path to store go binary into. Defaults to: **/usr/local** - which is sourced using a handler.
