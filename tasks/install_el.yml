@@ -2,13 +2,13 @@
 # tasks file for go | EL Family
 
 - name: EL Family | Downloading and extracting {{ go_app }} {{ go_version }}
-  unarchive:
+  ansible.builtin.unarchive:
     src: "{{ go_dl_url }}"
     dest: "{{ go_bin_path }}"
     remote_src: yes
 
 - name: EL Family | Placing {{ go_profile_template_dest_file }} in {{ go_profile_template_path }} for system-wide availability
-  template:
+  ansible.builtin.template:
     src: "{{ go_profile_template_source_file }}"
     dest: "{{ go_profile_template_path }}/{{ go_profile_template_dest_file }}"
     mode: '0755'
