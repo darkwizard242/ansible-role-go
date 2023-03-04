@@ -2,25 +2,25 @@
 # tasks file for go
 
 - name: Import install_debian.yml if OS family is Debian and go_setup is true
-  import_tasks: install_debian.yml
+  ansible.builtin.import_tasks: install_debian.yml
   when:
     - ansible_os_family == "Debian"
     - go_setup
 
 - name: Import uninstall_debian.yml if OS family is Debian and go_setup is false
-  import_tasks: uninstall_debian.yml
+  ansible.builtin.import_tasks: uninstall_debian.yml
   when:
     - ansible_os_family == "Debian"
     - not go_setup
 
 - name: Import install_el.yml if OS family is EL and go_setup is true
-  import_tasks: install_el.yml
+  ansible.builtin.import_tasks: install_el.yml
   when:
     - ansible_os_family == "RedHat"
     - go_setup
 
 - name: Import install_el.yml if OS family is EL and go_setup is false
-  import_tasks: uninstall_el.yml
+  ansible.builtin.import_tasks: uninstall_el.yml
   when:
     - ansible_os_family == "RedHat"
     - not go_setup
