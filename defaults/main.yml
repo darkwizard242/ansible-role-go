@@ -3,7 +3,7 @@
 
 go_app: go
 go_setup: true
-go_version: 1.19.4
+go_version: 1.20.1
 go_os: linux
 go_arch: amd64
 go_dl_url: "https://dl.google.com/{{ go_app }}/{{ go_app }}{{ go_version }}.{{ go_os }}-{{ go_arch }}.tar.gz"
