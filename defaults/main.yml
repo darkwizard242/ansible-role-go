@@ -4,9 +4,17 @@
 go_app: go
 go_setup: true
 go_version: 1.22.2
-go_os: linux
-go_arch: amd64
-go_dl_url: "https://dl.google.com/{{ go_app }}/{{ go_app }}{{ go_version }}.{{ go_os }}-{{ go_arch }}.tar.gz"
+go_os: "{{ ansible_system | lower }}"
+go_architecture_map:
+  amd64: amd64
+  arm: arm64
+  x86_64: amd64
+  armv6l: armv6
+  armv7l: armv7
+  aarch64: arm64
+  32-bit: "386"
+  64-bit: amd64
+go_dl_url: "https://dl.google.com/{{ go_app }}/{{ go_app }}{{ go_version }}.{{ go_os }}-{{ go_architecture_map[ansible_architecture] }}.tar.gz"
 go_bin_path: /usr/local
 go_profile_template_export_line: "{{ go_bin_path}}/go/bin"
 go_profile_template_path: /etc/profile.d
