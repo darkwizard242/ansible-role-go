@@ -17,7 +17,7 @@ Available variables are listed below (located in `defaults/main.yml`):
 ```yaml
 go_app: go
 go_setup: true
-go_version: 1.22.2
+go_version: 1.22.4
 go_os: "{{ ansible_system | lower }}"
 go_architecture_map:
   amd64: amd64
@@ -42,7 +42,7 @@ Variable                        | Description
 ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 go_app                          | Defines the app to install i.e. **go**
 go_setup                        | Boolean variable that only allows `true` or `false` values. Defaults to `true`. When set to `true` it will setup/install go. When set to `false`, it will remove go from the system - assuming it was installed via this role and value for `go_bin_path` path is correct.
-go_version                      | Defined to dynamically fetch the desired version to install. Defaults to: **1.22.2**
+go_version                      | Defined to dynamically fetch the desired version to install. Defaults to: **1.22.4**
 go_os                           | Defines OS type. Used for obtaining the correct type of binaries based on OS.
 go_architecture_map             | Defines Architecture type. Used for obtaining the correct type of binaries based on Architecture.
 go_dl_url                       | Defines URL to download the go binary from.
