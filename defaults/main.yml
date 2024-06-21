@@ -3,7 +3,7 @@
 
 go_app: go
 go_setup: true
-go_version: 1.22.2
+go_version: 1.22.4
 go_os: "{{ ansible_system | lower }}"
 go_architecture_map:
   amd64: amd64
