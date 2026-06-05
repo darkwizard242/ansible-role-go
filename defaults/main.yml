@@ -1,5 +1,5 @@
 ---
-# defaults file for go
+# defaults file for GO
 
 go_app: go
 go_setup: true
