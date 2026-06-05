@@ -1,9 +1,9 @@
 ---
-# defaults file for go
+# defaults file for GO
 
 go_app: go
 go_setup: true
-go_version: 1.22.4
+go_version: 1.26.4
 go_os: "{{ ansible_system | lower }}"
 go_architecture_map:
   amd64: amd64
